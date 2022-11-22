@@ -7,8 +7,7 @@ import App from '../App';
 
 describe('Teste o componente App', () => {
   it('Teste se o topo da aplicação contém um conjunto fixo de links de navegação', () => {
-    const { history } = renderWithRouter(<App />);
-
+    renderWithRouter(<App />);
     const linkHome = screen.getByRole('link', { name: 'Home' });
     expect(linkHome).toBeInTheDocument();
 
